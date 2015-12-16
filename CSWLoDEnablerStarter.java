@@ -47,7 +47,6 @@ import org.n52.wps.io.data.GenericFileData;
 import org.n52.wps.io.data.binding.complex.GenericFileDataBinding;
 import org.n52.wps.io.data.binding.literal.LiteralStringBinding;
 import org.n52.wps.server.AbstractAnnotatedAlgorithm;
-import org.n52.wps.server.modules.LocalAlgorithmRepositoryCM;
 import org.n52.wps.webapp.api.ConfigurationModule;
 import org.n52.wps.webapp.service.ConfigurationService;
 import org.slf4j.Logger;
@@ -98,10 +97,10 @@ public class CSWLoDEnablerStarter extends AbstractAnnotatedAlgorithm {
 
         ConfigurationService configurationService = WPSConfig.getInstance().getConfigurationManager().getConfigurationServices();
 
-        String urlVirtuosoJdbc = (String) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, LocalAlgorithmRepositoryCM.virtuosoJDBCUrlKey).getValue();
-        String virtuosoUser = (String) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, LocalAlgorithmRepositoryCM.virtuosoUserKey).getValue();
-        String virtuosoPass = (String) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, LocalAlgorithmRepositoryCM.virtuosoPwdKey).getValue();
-        startPos = (Integer) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, LocalAlgorithmRepositoryCM.startPosKey).getValue();
+        String urlVirtuosoJdbc = (String) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, CSWLoDAlgorithmCM.virtuosoJDBCUrlKey).getValue();
+        String virtuosoUser = (String) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, CSWLoDAlgorithmCM.virtuosoUserKey).getValue();
+        String virtuosoPass = (String) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, CSWLoDAlgorithmCM.virtuosoPwdKey).getValue();
+        startPos = (Integer) configurationService.getConfigurationEntry(cswLoDAlgorithmConfigModule, CSWLoDAlgorithmCM.startPosKey).getValue();
 
         // from WPS configuration
         props.setProperty("URL_VIRTUOSO_JDBC", urlVirtuosoJdbc);
