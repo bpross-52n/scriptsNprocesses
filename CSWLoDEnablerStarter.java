@@ -26,7 +26,6 @@
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General
  * Public License for more details.
  */
-package org.n52.wps.server.algorithm;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -36,7 +35,7 @@ import java.util.Properties;
 
 import org.n52.lod.Configuration;
 import org.n52.lod.ProgressListener;
-import org.n52.lod.algorithm.CSWLoDAlgorithmCM;
+import org.n52.wps.CSWLoDAlgorithmCM;
 import org.n52.lod.csw.CSWLoDEnabler;
 import org.n52.wps.algorithm.annotation.Algorithm;
 import org.n52.wps.algorithm.annotation.ComplexDataOutput;
@@ -59,7 +58,7 @@ import org.slf4j.LoggerFactory;
  *
  */
 @Algorithm(
-        version = "1.1.0")
+        version = "1.1.0", identifier="org.n52.wps.server.algorithm.CSWLoDEnablerStarter")
 public class CSWLoDEnablerStarter extends AbstractAnnotatedAlgorithm {
 
     private static final Logger log = LoggerFactory.getLogger(CSWLoDEnablerStarter.class);
