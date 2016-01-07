@@ -145,7 +145,7 @@ public class CSWLoDEnablerStarter extends AbstractAnnotatedAlgorithm {
     }
 
     @LiteralDataInput(
-            identifier = "urlCSW", binding = LiteralStringBinding.class, defaultValue = "http://catalog-glues.ufz.de/soapServices/CSWStartup", minOccurs = 1, maxOccurs = 1)
+            identifier = "urlCSW", binding = LiteralStringBinding.class, defaultValue = "https://catalog-glues.ufz.de/soapServices/CSWStartup", minOccurs = 1, maxOccurs = 1)
     public void setUrlCSW(String urlCSW) {
         this.urlCSW = urlCSW;
     }
